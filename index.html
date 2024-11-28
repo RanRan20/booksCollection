@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book Collection</title>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/journal/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+	<h1 class="display-4 text-center"><span class="text-primary">Book</span> Collection</h1>
+	<form action="#" method="post" class="books" id=book>
+		<div class="form-group">
+			<label>Title</label>
+			<input type="text" id="title" class="form-control"name="" >
+		</div>
+		<div class="form-group">
+			<label>Author</label>
+			<input type="text" id="author" class="form-control"name="" >
+		</div>
+		<div class="form-group d-grid gap-2">
+			<label>#ISBN</label>
+			<input type="text" id="isbn" class="form-control"name="" >
+			<input type="submit" value="add" class="btn btn-primary btn-block ">
+		</div>
+		
+	</form>
+	<table class="table table-stripped mt-5">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>#ISBN</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody id="book-list">
+			
+		</tbody>
+	</table>
+	
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
