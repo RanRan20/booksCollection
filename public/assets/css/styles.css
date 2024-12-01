@@ -1,0 +1,40 @@
+.modal {
+    width: 100%;
+    box-shadow: 0 3px 7px rgba(0,0,0,.3);
+    border-radius: .3rem;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header, .modal-body {
+    padding: 1rem;
+}
+
+.form-group input[type=file]{
+    margin: 0 0 0.7em 0;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 1rem 0;
+}

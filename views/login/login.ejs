@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/assets/css/login/styles.css">
+    </head>
+    <body>
+        
+        <!--signup form -->
+        <div class="form-container" id="signup-form">
+        <form id="signup">
+            <h2>Register</h2>
+            <div class="input-box">
+                <input type="text" class="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" class="email" placeholder="Email here" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="password" placeholder="Create a password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="password" placeholder="Confirm password" required>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms-btn" required>
+                <label for="terms-btn">I accept all terms and conditions</label>
+            </div>
+            <button type="submit" class="button" name="button">Sign Up</button>
+            <div class="form-footer">
+                <p>Already have an account? <a href="#" id="show-login">Login now</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container" id="login-form" style="display: none;">
+        <form id="login" method="POST">
+            <h2>Login</h2>
+            <div class="input-box">
+                <input type="email" class="email" placeholder="Email here" required>
+                <img src="/assets/images/profile.svg" alt="User profile">
+            </div>
+            <div class="input-box">
+                <input type="password" class="password" placeholder="Password here" required>
+                <img src="/assets/images/padlock.svg" alt="User password">
+            </div>
+            <button type="submit" class="button" name="button">Login</button>
+            <div class="form-footer">
+                <p>Not registered? <a href="#" id="show-signup">Sign up now</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="/assets/js/login/login.js"></script>
+    </body>
+</html>

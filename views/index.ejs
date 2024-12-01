@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Collection</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/journal/bootstrap.min.css">
+    
+</head>
+<body>
+<div class="container mt-4">
+
+    <h1 class="display-4 text-center"><span class="text-primary">Book</span> Collection</h1>
+    <form action="#" method="post" class="books" id="book">
+
+        <div class="form-group">
+            <label>Book Cover</label>
+            <input type="file" id="image" class="form-control" accept="image/*" required>
+        </div>
+
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" id="title" class="form-control" name="">
+        </div>
+        <div class="form-group">
+            <label>Author</label>
+            <input type="text" id="author" class="form-control" name="">
+        </div>
+
+        <div class="form-group">
+            <label>Genre</label>
+            <select id="genre" class="form-control" required>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Biography">Biography</option>
+                <option value="Horror">Horror</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea id="description" class="form-control" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Rating</label>
+            <input type="number" id="rating" class="form-control" min="1" max="10" required>
+        </div>
+
+        <div class="form-group d-grid gap-2 mt-3">
+            <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+             <button type="button" id="clearBooks" class="btn btn-danger btn-block">Clear</button>
+        </div>
+
+    </form>
+
+    <table class="table table-stripped mt-5">
+        <thead>
+            <tr>
+                <th>Image</th>  
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="book-list">
+        </tbody>
+    </table>
+    
+</div>
+
+
+<div id="editModal" class="modal" tabindex="-1" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Book</h5>
+                <button type="button" class="close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="form-group">
+                        <label for="editTitle">Title</label>
+                        <input type="text" id="editTitle" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editAuthor">Author</label>
+                        <input type="text" id="editAuthor" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editGenre">Genre</label>
+                        <select id="editGenre" class="form-control">
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Biography">Biography</option>
+                            <option value="Horror">Horror</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editDescription">Description</label>
+                        <textarea id="editDescription" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="editRating">Rating</label>
+                        <input type="number" id="editRating" class="form-control" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editImage">Book Cover</label>
+                        <input type="file" id="editImage" class="form-control" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../public/assets/js/script.js"></script>
+</body>
+</html>
