@@ -1,3 +1,43 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-theme .form-control {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-theme .btn {
+    background-color: #444;
+    border-color: #444;
+}
+
+body.dark-theme .btn:hover{
+background-color: #44444422;
+    border-color: #44444422;
+}
+
+
+body.dark-theme #sunIcon {
+    display: none;
+}
+
+body:not(.dark-theme) #moonIcon {
+    display: none;
+}
+
+.theme-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
 .modal {
     width: 100%;
     box-shadow: 0 3px 7px rgba(0,0,0,.3);
@@ -15,7 +55,7 @@
     padding: 1rem;
 }
 
-.form-group input[type=file]{
+.form-group input[type=file] {
     margin: 0 0 0.7em 0;
 }
 
@@ -38,3 +78,4 @@
 .modal-body {
     padding: 1rem 0;
 }
+

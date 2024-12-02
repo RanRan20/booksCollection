@@ -4,12 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Collection</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/journal/bootstrap.min.css">
     
 </head>
 <body>
 <div class="container mt-4">
+    
+
+<div class="container mt-4">
+    <div class="form-group">
+        <label class="theme-toggle">
+            <img id="sunIcon" src="/assets/images/sun.svg" alt="Sun" class="theme-icon">
+            <img id="moonIcon" src="/assets/images/moon.svg" alt="Moon" class="theme-icon" style="display: none;">
+        </label>
+        <input type="checkbox" id="themeToggle" style="display: none;">
+    </div>
+</div>
 
     <h1 class="display-4 text-center"><span class="text-primary">Book</span> Collection</h1>
     <form action="#" method="post" class="books" id="book">
@@ -122,6 +133,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="../public/assets/js/script.js"></script>
+<script type="text/javascript" src="/assets/js/script.js"></script>
 </body>
 </html>

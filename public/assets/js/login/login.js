@@ -36,7 +36,7 @@ document.getElementById("login").addEventListener("submit", function(event) {
     
     if (storedUser && storedUser.email === email && storedUser.password === password) {
         alert("Login successful! Redirecting to book collection...");
-        window.location.href = "../index.html"; 
+        window.location.href = "/index"; 
     } else {
         alert("Invalid login credentials!");
     }

@@ -1,3 +1,41 @@
+function toggleTheme() {
+    const body = document.body;
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    if (body.classList.contains("dark-theme")) {
+        body.classList.remove("dark-theme"); 
+        sunIcon.style.display = "inline";   
+        moonIcon.style.display = "none";
+
+        localStorage.setItem("theme", "light");   
+    } else {
+        body.classList.add("dark-theme");   
+        sunIcon.style.display = "none";      
+        moonIcon.style.display = "inline";
+
+        localStorage.setItem("theme", "dark");   
+    }
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+
+        document.body.classList.add("dark-theme");
+        document.getElementById("sunIcon").style.display = "none";
+        document.getElementById("moonIcon").style.display = "inline";
+    } else {
+        document.getElementById("sunIcon").style.display = "inline";
+        document.getElementById("moonIcon").style.display = "none";
+    }
+});
+
+document.querySelector("#themeToggle").addEventListener("click", toggleTheme);
+document.querySelector("#sunIcon").addEventListener("click", toggleTheme);
+document.querySelector("#moonIcon").addEventListener("click", toggleTheme);
+
 class book {
     constructor(image, title, author, genre, description, rating) {
         this.image = image;
@@ -225,3 +263,4 @@ document.querySelector(".books").addEventListener("submit", (e) => {
         uI.showAlert("Error loading image", "danger");
     };
 });
+

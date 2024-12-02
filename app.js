@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname,"public")));
 
 
-app.get('/login/login.html', (req, res) => {
+app.get('/login', (req, res) => {
     res.render('login/login');  
 });
 
@@ -20,12 +20,12 @@ app.post('/login', (req, res) => {
     if (username === 'usuario' && password === 'contraseña') {
         res.redirect('/index'); 
     } else {
-        res.send('Credenciales incorrectas, por favor intente de nuevo.');  
+        res.send('incorrect, try again.');  
     }
 });
 
 
-app.get('/index.html', (req, res) => {
+app.get('/index', (req, res) => {
     res.render('index');  
 });
 
