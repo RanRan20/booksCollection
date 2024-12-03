@@ -24,6 +24,7 @@
     "bytes": "^3.1.2",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.3",
+    "chromedriver": "^131.0.1",
     "cliui": "^8.0.1",
     "color-convert": "^2.0.1",
     "color-name": "^1.1.4",
@@ -73,6 +74,7 @@
     "is-number": "^7.0.0",
     "is-number-like": "^1.0.8",
     "is-wsl": "^1.1.0",
+    "jest": "^29.7.0",
     "jsonfile": "^3.0.1",
     "limiter": "^1.1.5",
     "localtunnel": "^2.0.2",
@@ -104,6 +106,7 @@
     "resp-modifier": "^6.0.2",
     "rx": "^4.1.0",
     "safer-buffer": "^2.1.2",
+    "selenium-webdriver": "^4.27.0",
     "send": "^0.16.2",
     "serve-index": "^1.9.1",
     "serve-static": "^1.13.2",
@@ -138,7 +141,8 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "node app.js"
+    "dev": "node app.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC"
