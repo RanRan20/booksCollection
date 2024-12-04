@@ -264,3 +264,143 @@ document.querySelector(".books").addEventListener("submit", (e) => {
     };
 });
 
+
+//tests
+
+// Test 1
+function testToggleTheme() {
+    
+    const sunIcon = document.getElementById("sunIcon");
+    sunIcon.click();
+    
+    
+    const body = document.body;
+    if (body.classList.contains("dark-theme")) {
+        console.log("Test Passed -  Theme changed to dark.");
+    } else {
+        console.log("Test Failed - Theme did not change to dark.");
+    }
+
+    
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        console.log("Test Passed - LocalStorage updated with dark theme.");
+    } else {
+        console.log("Test Failed - LocalStorage did not save dark theme.");
+    }
+}
+
+
+
+// Test 2
+function testAddBook() {
+    const mockBook = new book(
+        "test-image",
+        "Test Book",
+        "Test Author",
+        "Fantasy",
+        "This is a test description.",
+        "8"
+    );
+
+  
+    data.addBooks(mockBook);
+
+    const books = data.getBooks();
+    if (books.length > 0 && books[books.length - 1].title === "Test Book") {
+        console.log("Test Passed - Book added successfully.");
+    } else {
+        console.log("Test Failed - Book was not added.");
+    }
+}
+
+//test 3
+function testDeleteBook() {
+  
+    const mockBook = new book(
+        "test-image",
+        "Test Book",
+        "Test Author",
+        "Fantasy",
+        "This is a test description.",
+        "8"
+    );
+    data.addBooks(mockBook);
+
+    const books = data.getBooks();
+    const initialBookCount = books.length;
+
+    
+    data.removeBook(0);
+
+    const updatedBooks = data.getBooks();
+    if (updatedBooks.length === initialBookCount - 1) {
+        console.log("Test Passed - Book deleted successfully.");
+    } else {
+        console.log("Test Failed - Book was not deleted.");
+    }
+}
+
+
+// Test 4
+function testUpdateBook() {
+   
+    const mockBook = new book(
+        "test-image",
+        "Test Book",
+        "Test Author",
+        "Fantasy",
+        "This is a test description.",
+        "8"
+    );
+    data.addBooks(mockBook);
+
+    const books = data.getBooks();
+    const index = books.length - 1;
+
+   
+    const updatedBook = new book(
+        "new-test-image",
+        "Updated Book",
+        "Updated Author",
+        "Adventure",
+        "This is an updated description.",
+        "9"
+    );
+
+    
+    data.updateBook(updatedBook, index);
+
+    const updatedBooks = data.getBooks();
+    if (
+        updatedBooks[index].title === "Updated Book" &&
+        updatedBooks[index].author === "Updated Author"
+    ) {
+        console.log("Test Passed - Book updated successfully.");
+    } else {
+        console.log("Test Failed - Book was not updated.");
+    }
+}
+
+// Test 5
+function testClearAllBooks() {
+    
+    data.addBooks(new book("image/images.jpeg", "bookXd", "Authors", "Fantasy", "this is incredible", "7"));
+    data.addBooks(new book("image/images.jpeg", "bookw", "authorz", "Sci-Fi", "that was incredible", "8"));
+
+    
+    uI.clearAllBooks();
+
+    const books = data.getBooks();
+    if (books.length === 0) {
+        console.log("Test Passed - All books was removed.");
+    } else {
+        console.log("Test Failed - Books were not removed.");
+    }
+}
+
+testToggleTheme();
+testAddBook();
+testDeleteBook();
+testUpdateBook();
+testClearAllBooks();
